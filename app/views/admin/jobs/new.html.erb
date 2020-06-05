@@ -1,0 +1,9 @@
+<h2> Add a job </h2>
+
+<%= simple_form_for [:admin,@job] do |f| %>
+
+<%= f.input :title %>
+<%= f.input :description %>
+
+  <%= f.usbmit 'Submit' %>
+<% end %>
