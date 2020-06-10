@@ -1,11 +1,11 @@
 class Admin::ResumesController < ApplicationController
   before_action :authenticate_user!
-  brfore_action :require_is_admin
+  before_action :require_is_admin
 
   layout 'admin'
 
   def index
     @job = Job.find(params[:job_id])
-    @resume = @job.resume.order('created at DESC')
+    @resumes = @job.resumes.order('created_at DESC')
   end
 end
