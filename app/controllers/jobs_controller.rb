@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :destroy, :update, :create]
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :favorite]
   layout 'job'
   def index
     @jobs = case params[:order]
@@ -25,7 +25,25 @@ class JobsController < ApplicationController
   end
 
 
+  def add
+ @job = Job.find(params[:id])
 
+ if !current_user.is_member_of?(@job)
+   current_user.add_favorite!(@job)
+ end
+
+ redirect_to :back
+end
+
+def remove
+ @job = Job.find(params[:id])
+
+ if current_user.is_member_of?(@job)
+   current_user.remove_favorite!(@job)
+ end
+
+ redirect_to :back
+end
 
 
 

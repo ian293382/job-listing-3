@@ -4,6 +4,18 @@
   <%= simple_format(@job.description) %>
 </p>
 
+<td>
+  <% if current_user && current_user.is_member_of?(@job) %>
+    <%= link_to remove_job_path(@job), method: :post, class: "btn btn-lg btn-primary" do %>
+      <span class="fa fa-star"></span> 已收藏
+    <% end %>
+  <% else %>
+    <%= link_to add_job_path(@job), method: :post, class: "btn btn-lg btn-default" do %>
+      <span class="fa fa-star-o"></span> 收藏
+    <% end %>
+    <% end %>
+</td>
+
 <div class="text-center">
   <%= link_to("提交履歷", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration: underline;") %>
 </div>

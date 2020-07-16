@@ -21,4 +21,6 @@ class Job < ApplicationRecord
 
 
   has_many :resumes
+  has_many :favorites
+  has_many :members, through: :favorites, source: :user
 end

@@ -17,10 +17,29 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-
+         #判別是否為管理員
          def admin?
            is_admin
         end
 
+
+        # 判別是否收藏
+
+        def is_member_of?(job)
+          favorite_jobs.include?(job)
+        end
+
+    # 加入收藏 #
+    def add_favorite!(job)
+      favorite_jobs << job
+    end
+
+    # 移除收藏 #
+    def remove_favorite!(job)
+      favorite_jobs.delete(job)
+    end
+
   has_many :resumes
+  has_many :favorites
+  has_many :favorite_jobs, through: :favorites, source: :job
 end
