@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :jobs do
     resources :resumes
 
-    put :favorite, on: :member
+  
     member do
      post :add
      post :remove

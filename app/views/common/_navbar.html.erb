@@ -21,7 +21,8 @@
               </a>
               <ul class="dropdown-menu">
                 <% if current_user.admin? %>
-              <li> <%= link_to(' My favorites', favorites_path) %> </li>
+                <li> <%= link_to(' Admin Jobs plats', admin_jobs_path) %> </li>
+                <li> <%= link_to(' My Favorites', favorites_path) %> </li>
                 <% end %>
                 <li> <%= link_to("Log Out", destroy_user_session_path, method: :delete) %> </li>
 
