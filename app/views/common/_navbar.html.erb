@@ -3,8 +3,16 @@
     <!-- Brand and toggle get grouped for better mobile display -->
 
     <div  class="navbar-header">
-      <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >真·24K Offer</a>
+      <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >金坷拉·24K Offer</a>
     </div>
+
+    <div class="collapse navbar-collapse top-nav" id="menu-4">
+                          <!--=== 頁首連結 ===-->
+      <ul class="nav navbar-nav navbar-left">
+        <li> <%= link_to('首頁', root_path) %> </li>
+        <li> <%= link_to('工作', jobs_path) %> </li>
+      </ul>
+
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
