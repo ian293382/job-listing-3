@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20200716133809) do
 
-  create_table "collections", force: :cascade do |t|
-    t.integer  "job_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "favorites", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "job_id"
@@ -35,8 +28,8 @@ ActiveRecord::Schema.define(version: 20200716133809) do
     t.integer  "wage_lower_bound"
     t.string   "contact_email"
     t.boolean  "is_hidden",        default: true
-    t.integer  "location_id"
-    t.integer  "category_id"
+    t.string   "location"
+    t.string   "category"
     t.string   "company"
     t.integer  "user_id"
   end

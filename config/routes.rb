@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :jobs do
     resources :resumes
 
-  
+
     member do
      post :add
      post :remove
@@ -24,10 +24,13 @@ Rails.application.routes.draw do
 
         resources :resumes
       end
+    
     end
 
 
     resources :favorites
+
+
 
 
   root 'welcome#index'
