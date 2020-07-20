@@ -1,0 +1,40 @@
+<div class="row jobs-show">
+  <div class="col-md-12 col-lg-10 col-lg-offset-1">
+    <div class="row">
+      <section id="job-section">
+        <div class="wrapper">
+          <div class="job-section">
+            <div class="col-sm-2">
+              <img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
+            </div>
+            <div class="col-sm-8">
+              <div class="title">
+                <%= link_to(job.title, job_path(job)) %>
+              </div>
+              <p>
+                <%= job.category %>
+              </p>
+              <p>
+                <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
+                <%= job.location %>
+
+                <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
+                <%= job.wage_lower_bound / 1000 %> K -
+                <%= job.wage_upper_bound / 1000 %> K
+              </p>
+              <p>
+                <%=  job.description %>
+              </p>
+            </div>
+            <!-- button -->
+            <div class="col-sm-2 pull-right">
+              <div class="button">
+                <%= link_to(t('btn_job_apply'), new_job_resume_path(job), class: "btn btn-info btn-middle", method: :get) %>
+              <div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

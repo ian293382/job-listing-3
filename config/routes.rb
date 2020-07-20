@@ -2,15 +2,17 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "users/registrations" }
 
   resources :jobs do
-    resources :resumes
+      resources :resumes
 
+      member do
+        post :add
+        post :remove
+      end
 
-    member do
-     post :add
-     post :remove
-   end
-
-  end
+      collection do
+        get :search
+      end
+    end
 
 
 
@@ -24,7 +26,7 @@ Rails.application.routes.draw do
 
         resources :resumes
       end
-    
+
     end
 
 
