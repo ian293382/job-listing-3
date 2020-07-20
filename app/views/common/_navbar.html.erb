@@ -19,8 +19,8 @@
         <li>
 
           <% if !current_user %>
-          <li><%= button_to("登入", new_user_session_path, method: :get, class: "btn btn- navbar-btn") %></li>
-
+          <li><%= button_to("登入", new_user_session_path, method: :get, class: "btn btn-default navbar-btn") %></li>
+      
           <li><%= button_to("註冊", new_user_registration_path, method: :get, class: "btn btn-default navbar-btn") %> </li>
           <% else %>
             <li class="dropdown">
