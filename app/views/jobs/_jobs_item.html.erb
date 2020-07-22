@@ -2,10 +2,8 @@
   <div class="col-md-12 col-lg-10 col-lg-offset-1">
     <div class="row">
       <section id="job-section">
-        <div class="wrapper">
-          <div class="job-section">
-            <div class="col-sm-2">
-              <img class="job-logo" src='http://i.imgur.com/zVU8xTV.jpg'>
+
+
             </div>
             <div class="col-sm-8">
               <div class="title">
@@ -19,8 +17,8 @@
                 <%= job.location %>
 
                 <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
-                <%= job.wage_lower_bound / 1000 %> K -
-                <%= job.wage_upper_bound / 1000 %> K
+                <%= job.wage_lower_bound  %> K -
+                <%= job.wage_upper_bound  %> K
               </p>
               <p>
                 <%=  job.description %>
@@ -34,6 +32,7 @@
             </div>
           </div>
         </div>
+
       </section>
     </div>
   </div>

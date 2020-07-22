@@ -2,29 +2,27 @@
   <!--no result-->
   <% if @jobs.blank?%>
     <div class="search-error">
-          <h3><%= t('no_result') %></h3>
-          <br>
-          <p><%= link_to(t('view_all'), jobs_path, class: "btn btn-lg btn-success") %></p>
-        </div>
+      <h3><%= t('no_result') %></h3>
+      <br>
+      <p><%= link_to(t('view_all'), jobs_path, class: "btn btn-lg btn-success") %></p>
+         </div>
+       <!-- search results -->
+       <% else %>
+         <div class="search-results">
+           <div class="text-center">
+             <!-- string -->
+             <h3><%= t('str_search') %><%= @jobs.count %><%= t('result') %></h3>
+           </div>
 
-    <!-- search result -->
-    <% else %>
-     <div class="search-results">
-       <div class= "test-center">
-         <!-- string -->
-         <h3> <%= t('str_seach')%><%= @jobs.count %><%= t('str-result') %></h3>
-       </div>
+           <!-- render ist of results -->
+           <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
 
-
-       <!-- render ist of results -->
-       <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
-
-       <!-- pagination -->
+       <!-- pagination 換頁區塊 -->
 
        <div class="col-md-10 col-md-offset-1 job-bottom">
          <div class="text-center">
            <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
-         </div>
+        </div>
         </div>
       </div>
     <% end %>

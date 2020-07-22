@@ -1,44 +1,101 @@
-<div class="jumbotron">
-  <h1 class="title">24K金坷拉</h1>
-  <p class="slogan">24K 金坷拉 是一個金坷拉網站。
-  <br>
-  我們希望藉由這網站，能讓大家找到金坷拉的美好。
-  <br>
-  憑藉自己努力及天份也能變成坷拉。
-  </p>
+<body data-spy="scroll" data-target=".nav-top">
+        <!--======== 網站頭圖以Intro命名=========-->
 
-  <p class="lead"><a class="btn btn-lg btn-danger" href="/jobs">馬上收割</a></p>
-</div>
-
-<section id="company">
-
-  <section id="company">
-    <div class = "container-fluid">
-      <div class="row">
-        <div class="col-sm-4 ">
-          <div class="thumbnail">
-            <img src="http://fullstack-public.oss-cn-qingdao.aliyuncs.com/2017-04-15-Screenshot%20at%20Apr%2015%2021-43-31.png" alt="search" class = "img-thumbnail">
-            <div class="caption">
-              <h3>聖地牙哥Santiago</h3>
+        <section class="intro">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="intro-content">
+                <h1>金坷拉 - 專業莊稼收割網站</h1>
+                <p>來自全球五百大企業，國內最好的肥料</p>
+                <a class="btn btn-primary-welcome" href="jobs" role="button">立即開始</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-sm-4 ">
-          <div class="thumbnail">
-            <img src="http://fullstack-public.oss-cn-qingdao.aliyuncs.com/2017-04-15-Screenshot%20at%20Apr%2015%2021-43-48.png" alt="bid" class = "img-thumbnail">
-            <div class="caption">
-              <h3>info@24Kginkela.com</h3>
-            </div>
+        </section>
+        <!--======== end 网站头图 =========-->
+
+        <!--======== 网站简介 =========-->
+        <section id="feature" class="our-experts">
+          <div class="container">
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2 class="section-title">遇見更好機會，體驗更好人生</h2>
+                    <div class="short-line"></div>
+                    <p class="index-contect">
+                      金坷拉在美國聖地牙哥創立。<br />
+                      我們利用最新的農業演算法，分析全球一流團隊需求，並傳送像韭菜求職者訊息，創立獨一無二的配對模式，讓優秀的企業收割機與人才的連結更為精準、快速、方便收割，就像史蒂夫和戴夫一樣。
+                    </p>
+                    <%= image_tag("feature.png") %>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+
+  <!--===== 品牌故事 =====-->
+  <section class="story-box">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>品牌故事</h2> <!-- 区块标题 -->
+        <h1>金坷拉</h1> <!-- 品牌名称 -->
+        <div class="short-line"></div> <!-- 分隔线 -->
+        <div class="row">
+          <div class="col-md-3 col-md-offset-1">
+            <%= image_tag("founder_1.png") %> <!-- 创办人头像 1 -->
+          </div>
+          <div class="col-md-7">
+            <h3>Victor</h3> <!-- 创办人姓名 -->
+            <p>我們希望能為大家帶來種類多樣、價格低廉並且設計獨特，且讓大多數人可以負擔的起的韭菜求職者，並讓韭菜們心甘情願地被收割，為此我們設計出一種的特殊物品－－金坷拉，摻了肥料不蒸發，能吸兩米氮磷鉀，韭菜畝產一千八。 </p> <!-- 创办人介绍 -->
           </div>
         </div>
-        <div class="col-sm-4 ">
-          <div class="thumbnail">
-            <img src="http://fullstack-public.oss-cn-qingdao.aliyuncs.com/2017-04-15-Screenshot%20at%20Apr%2015%2021-44-00.png" alt="heart" class = "img-thumbnail">
-            <div class="caption">
-              <h3>010-12344321</h3>
+        <hr />
+        <div class="row">
+          <div class="col-md-7 col-md-offset-1">
+            <h3>Kelly</h3> <!-- 创办人姓名 -->
+            <p>我們知道如果要提供顧客便宜、品質又好的商品，企業必須有效的管理成本及運用創新的製造方法，這是從未改變的信念，最有效的利用原料，尋找更經濟、更有效率及更有創意的製作或包裝方式，降低成本，回饋給大家! </p> <!-- 创办人介绍 -->
+          </div>
+          <div class="col-md-3">
+            <%= image_tag("founder_2.png") %> <!-- 创办人头像 2 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--===== 服务优势 =====-->
+  <section class="service-box">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>服務優勢</h2> <!-- 副标题 -->
+        <div class="short-line"></div> <!-- 分隔线 -->
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="box">
+              <%= image_tag("service_1.png") %> <!-- 图示 -->
+              <h3>快速招聘</h3> <!-- 标题 -->
+              <p>為了避免讓韭菜求職者等候太久，本網站設置數據化招聘流程，讓業者快速收割，降低時間成本。</p> <!-- 内文 -->
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="box">
+              <%= image_tag("service_2.png") %>
+              <h3>優質職缺</h3>
+              <p>為了讓大家韭菜畝產千八，本網站金坷拉擁有其他網站所沒有招募的優良職位，讓韭菜心甘情願地被業者榨乾。。</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="box">
+              <%= image_tag("service_3.png") %>
+              <h3>簡單樣式</h3>
+              <p>為了讓腦殘企業者及菜鳥韭菜應徵者使用更方便，使用簡單樣式讓網頁設計者可以偷懶還可以讓業者及應徵者使用起來更容易上手。</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!--===== 商品分类 =====-->
+
+</body>
