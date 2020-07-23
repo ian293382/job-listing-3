@@ -1508,7 +1508,7 @@ single-work span i.fa,
 /*===== footer ====*/
 .footer{
     text-align: center;
-    min-height: 250px;
+    min-height: 50px;
     background-color: #002E2E;
     padding: 15px 0;
     color: #fff;
@@ -1567,7 +1567,7 @@ single-work span i.fa,
   color: #ddd;
   letter-spacing: 1px;
   margin-top: 10px;
-  font-weight: 200;
+  font-weight: 50;
 
   img{
     width: 25px;
@@ -1580,17 +1580,7 @@ single-work span i.fa,
 
 }
 
-.goodjob{
-  float: right;
-  margin-top: -20px;
-  img{
-    width: 50px;
-  }
-  a:hover{
-    opacity: 0.45;
-  }
 
-}
 
 /*===== footer ====*/
 
