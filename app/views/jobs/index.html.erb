@@ -1,26 +1,25 @@
 
-<div class="col-md-10 col-md-offset-1 job-content">
   <div class="row">
-    <div class="col-md-12 btn-group select-job-box">
- <div class="dropdown btn-group clearfix">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown"
-  aria-haspopup="true" aria-expanded="true">
-  排序
-    <span class="caret"></span>
-  </button>
-   <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-    <li>
-      <%= link_to("按照薪資下限", jobs_path(:order => "by_lower_bound")) %>
-    </li>
-    <li>
-      <%= link_to("按照薪資上限", jobs_path(:order => "by_upper_bound")) %>
-    </li>
-    <li>
-      <%= link_to("按這發表時間排序", jobs_path ) %>
-    </li>
-  </ul>
-</div>
-</div>
+    <div class="col-md-9 btn-group select-job-box">
+      <div class="dropdown btn-group clearfix">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="true">
+        排序
+        <span class="caret"></span>
+      </button>
+           <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+            <li>
+              <%= link_to("按照薪資下限", jobs_path(:order => "by_lower_bound")) %>
+            </li>
+            <li>
+              <%= link_to("按照薪資上限", jobs_path(:order => "by_upper_bound")) %>
+            </li>
+            <li>
+              <%= link_to("按這發表時間排序", jobs_path ) %>
+            </li>
+          </ul>
+        </div>
+      </div>
 
 
         <% @jobs.each do |job| %>
@@ -49,7 +48,6 @@
       <!--=== 没有职位资料 ===-->
 </div>
 
-</div>
 
 
 <!--=== 分页区块 ===-->
