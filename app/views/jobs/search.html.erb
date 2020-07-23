@@ -1,4 +1,5 @@
-<div class="col-md-10 col-md-offset-1">
+
+
   <!--no result-->
   <% if @jobs.blank?%>
     <div class="search-error">
@@ -11,11 +12,13 @@
          <div class="search-results">
            <div class="text-center">
              <!-- string -->
-             <h3><%= t('str_search') %><%= @jobs.count %><%= t('result') %></h3>
+             <h3><%= t('search_results') %>～<%= @jobs.count %><%= t('result') %></h3>
            </div>
 
            <!-- render ist of results -->
            <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+
+  </div>
 
        <!-- pagination 換頁區塊 -->
 
@@ -24,7 +27,5 @@
            <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
         </div>
         </div>
-      </div>
+
     <% end %>
-  </div>
-</div>

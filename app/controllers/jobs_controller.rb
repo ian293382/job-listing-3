@@ -79,11 +79,7 @@ class JobsController < ApplicationController
   end
 
 
-  private
-    def job_params
-      params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound,
-         :contact_email, :is_hidden, :contact_email, :company, :category, :location)
-    end
+
 
    protected
 
@@ -91,7 +87,7 @@ class JobsController < ApplicationController
      @query_string = params[:q]
     if params[:q].present?
       @search_criteria =  {
-        title_or_company_or_location_orcategory_cont: @query_string
+        title_or_company_or_location_cont: @query_string
       }
     end
   end
@@ -100,4 +96,11 @@ class JobsController < ApplicationController
     { :title_cont => query_string }
   end
 
+  private
+
+    def job_params
+      params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound,
+         :contact_email, :is_hidden, :contact_email, :company, :category, :location)
+    end
+    
 end
