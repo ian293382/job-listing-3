@@ -1,4 +1,31 @@
-<h1> <%= @job.title %> </h1>
+<div class="job-content">
+
+    <!--======== Start - Jobs上方区块 =========-->
+    <div class="row">
+      <!--======== Start - 左侧区块 =========-->
+      <div class="col-md-7 col-md-offset-1 job-info-box">
+        <h1><%= @job.title %><span class="company">  / <%= @job.company %></span></h1>
+        <p>
+          <span class="wage"><%= @job.wage_lower_bound %> k ~ <%= @job.wage_upper_bound %> k </span> /
+          <span><span class="fa fa-map-marker"></span> <%= @job.location %></span> /
+          <span> <%= @job.category %></span>
+         </p>
+        <p class="created"><%= @job.created_at.strftime("%Y-%m-%d") %> <span class="website">發布於金坷拉</span></p>
+        <p>
+          <%= simple_format(@job.description) %>
+        </p>
+
+
+
+        </br>
+
+        <div class="text-center">
+          <%= link_to("提交履歷", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration: underline;") %>
+        </div>
+      </div>
+
+      <!--======== End - 左侧区块 =========-->
+
 
 <div class="col-md-3 job-action-box">
       <div>
@@ -13,15 +40,5 @@
             <% end %>
         </div>
 </div>
-
-<p>
-  <%= simple_format(@job.description) %>
-</p>
-
-
-
-</br>
-
-<div class="text-center">
-  <%= link_to("提交履歷", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration: underline;") %>
+</div>
 </div>
