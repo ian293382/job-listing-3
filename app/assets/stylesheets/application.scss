@@ -17,7 +17,8 @@
 
  @import "bootstrap";
  @import "bootstrap-sprockets";
- @import 'font-awesome';
+ @import "font-awesome";
+
 
  // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
@@ -59,7 +60,7 @@ section{
 /*===== Job ====*/
 .job-content{
   min-height: 725px;
-  margin-top: 100px;
+  margin-top: 130px;
 
   a{
     text-decoration: none;
@@ -88,7 +89,7 @@ section{
 .side-box{
   display: inline;
   position: absolute;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-left: 35px;
   padding-bottom: 12.5px;
   min-width: 260px;
