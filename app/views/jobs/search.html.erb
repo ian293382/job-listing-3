@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   <!--no result-->
@@ -29,3 +30,37 @@
         </div>
 
     <% end %>
+=======
+<div class="pull-right">
+   <%= link_to("Check All Jobs", jobs_path) %> | <%= link_to("Back", root_path) %>
+ </div>
+   <hr>
+   <table class="table table-boldered">
+     <thead>
+       <tr>
+         <td>Title</td>
+         <td>Lower Salary</td>
+         <td>Upper Salary</td>
+         <td>Publish Time</td>
+       </tr>
+     </thead>
+     <tbody>
+       <% @job.each do |job| %>
+         <tr>
+           <td>
+             <%= link_to(job.title, job_path(job)) %>
+           </td>
+           <td>
+             <%= job.wage_lower_bound %>
+           </td>
+           <td>
+             <%= job.wage_upper_bound %>
+           </td>
+           <td>
+             <%= job.created_at %>
+           </td>
+         </tr>
+       <% end %>
+     </tbody>
+   </table>
+>>>>>>> master
