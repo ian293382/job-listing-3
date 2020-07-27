@@ -1,0 +1,41 @@
+<div class="row jobs-show">
+  <div class="col-md-12 col-lg-10 col-lg-offset-1">
+    <div class="row">
+      <% @jobs.each do |job| %>
+      <section id="job-section">
+
+
+            </div>
+            <div class="col-sm-8">
+              <div class="title">
+                <%= link_to(job.title, job_path(job)) %>
+              </div>
+              <p>
+                <%= job.category %>
+              </p>
+              <p>
+                <i class="fa fa-location-arrow fa-fx" aria-hidden="true"></i>
+                <%= job.location %>
+
+                <i class="icon fa fa-usd fa-fx" aria-hidden="true"></i>
+                <%= job.wage_lower_bound  %> K -
+                <%= job.wage_upper_bound  %> K
+              </p>
+              <p>
+                <%=  job.description %>
+              </p>
+            </div>
+            <!-- button -->
+            <div class="col-sm-2 pull-right">
+              <div class="button">
+                <%= link_to(t('btn_job_apply'), new_job_resume_path(job), class: "btn btn-info btn-middle", method: :get) %>
+              <div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <% end %>
+    </div>
+  </div>
+</div>

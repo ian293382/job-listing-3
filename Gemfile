@@ -1,15 +1,28 @@
 source 'https://rubygems.org'
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> step14
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
+<<<<<<< HEAD
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
 
+=======
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.0.0'
+# Use sqlite3 as the database for Active Record
+gem 'pg'
+>>>>>>> step14
 # Use Puma as the app server
 gem 'puma', '~> 4.0'
 # Use SCSS for stylesheets
@@ -43,13 +56,21 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 
 gem 'carrierwave'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'ransack'
 
 gem 'searchkick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+<<<<<<< HEAD
   gem 'byebug', platform: :mri
   gem 'sqlite3', '1.3.13'
+=======
+
+    gem 'sqlite3', '1.3.13'
+>>>>>>> step14
 end
 
 group :development do
@@ -59,7 +80,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
 end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

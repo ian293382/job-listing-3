@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+
+
+  <!--no result-->
+  <% if @jobs.blank?%>
+    <div class="search-error">
+      <h3><%= t('no_result') %></h3>
+      <br>
+      <p><%= link_to(t('view_all'), jobs_path, class: "btn btn-lg btn-success") %></p>
+         </div>
+       <!-- search results -->
+       <% else %>
+         <div class="search-results">
+           <div class="text-center">
+             <!-- string -->
+             <h3><%= t('search_results') %>～<%= @jobs.count %><%= t('result') %></h3>
+           </div>
+
+           <!-- render ist of results -->
+           <%= render :partial => "jobs_item", :collection => @jobs, :as => :job %>
+
+  </div>
+
+       <!-- pagination 換頁區塊 -->
+
+       <div class="col-md-10 col-md-offset-1 job-bottom">
+         <div class="text-center">
+           <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+        </div>
+        </div>
+
+    <% end %>
+=======
 <div class="pull-right">
    <%= link_to("Check All Jobs", jobs_path) %> | <%= link_to("Back", root_path) %>
  </div>
@@ -30,3 +63,4 @@
        <% end %>
      </tbody>
    </table>
+>>>>>>> master

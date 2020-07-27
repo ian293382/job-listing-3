@@ -2,12 +2,14 @@
 
 <%= simple_form_for @job do |f| %>
 
-<%= f.input :title %>
+<%= f.input :title%>
 <%= f.input :description %>
+<%= f.input :category_id, :label => "分類" %>
+<%= f.input :location_id, :label => "地點" %>
+<%= f.input :company, :label => "公司" %>
 <%= f.input :wage_lower_bound, :label => "薪資下限" %>
 <%= f.input :wage_upper_bound, :label => "薪資上限" %>
 <%= f.input :contact_email, :label => "聯絡資訊" %>
 <%= f.input :is_hidden %>
-
   <%= f.submit "Submit" %>
 <% end %>
